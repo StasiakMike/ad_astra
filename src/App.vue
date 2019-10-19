@@ -1,29 +1,51 @@
 <template>
-  <div id="app">
-    <div id="nav">
-      <router-link to="/">Home</router-link> |
-      <router-link to="/about">About</router-link>
-    </div>
-    <router-view/>
+  <div class="app">
+      <div class="nav">
+          <router-link to="/"><b>AD ASTRA |</b></router-link>
+          <router-link to="/about"><b> ABOUT</b></router-link>
+          <span>2019 &copy; Mike Stasiak & MvdB Software Solutions</span>
+      </div>
+    <router-view />
   </div>
 </template>
 
 <style lang="scss">
-#app {
-  font-family: 'Avenir', Helvetica, Arial, sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  text-align: center;
-  color: #2c3e50;
+
+@import url('https://fonts.googleapis.com/css?family=Montserrat:300,400,600,800&display=swap');
+
+* {
+  box-sizing: border-box;
 }
-#nav {
-  padding: 30px;
-  a {
-    font-weight: bold;
-    color: #2c3e50;
-    &.router-link-exact-active {
-      color: #42b983;
-    }
+body {
+  font-family: 'Monserrat', sans-serif;
+  margin: 0;
+  padding: 0;
+}
+
+.nav {
+  background-color: black;
+  height: 7%;
+}
+
+a:link {
+  color: white;
+  text-decoration: none;
+}
+
+a:visited {
+    color: white;
+    text-decoration: none;
+}
+
+span {
+  text-align: center;
+  position: fixed;
+  right: 10px;
+  color: white;
+
+  @media (max-width: 768px) {
+    display: none;
   }
 }
+
 </style>
